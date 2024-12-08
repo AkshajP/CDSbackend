@@ -27,10 +27,10 @@ def process_audio():
         
         '''comment out the process required'''
 
-        model_weights_path = "models/robust_model_80_20_split.h5"
-        #model_weights_path = "models/pcp_model_80_20_split.h5"
-        #chord_segments = infer_pcp_chords(temp_path, model_weights_path)
-        chord_segments = infer_robust_chords(temp_path, model_weights_path)
+        #model_weights_path = "models/robust_model_80_20_split.h5"
+        model_weights_path = "models/pcp_model_80_20_split.h5"
+        chord_segments = infer_pcp_chords(temp_path, model_weights_path)
+        #chord_segments = infer_robust_chords(temp_path, model_weights_path)
         
         # Format the results for frontend
         results = [
@@ -70,4 +70,4 @@ def serve(path):
         return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=os.environ['PORT'], debug=False)
