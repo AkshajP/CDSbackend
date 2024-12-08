@@ -47,7 +47,7 @@ def create_ffnn_model():
     """
     
     model = Sequential([
-        InputLayer(input_shape=(inputshape,)),
+        InputLayer(shape=(inputshape,)),
 
         Dense(inputshape*2, activation='relu'),
         BatchNormalization(),

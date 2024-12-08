@@ -8,7 +8,7 @@ from better_running_inference import infer_chords as infer_pcp_chords
 from robust_betteronset_inference import infer_chords as infer_robust_chords
 
 # Initialize Flask app
-app = Flask(__name__, static_folder='frontend/build')
+app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 # API endpoints
@@ -58,6 +58,9 @@ def process_audio():
         }), 500
 
 # Serve React static files
+def handler(event, context):
+    return app(event, context)
+
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def serve(path):
