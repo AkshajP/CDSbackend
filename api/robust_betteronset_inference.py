@@ -5,7 +5,6 @@ import os
 from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.layers import Dense, BatchNormalization, Dropout, InputLayer
 from itertools import groupby
-from operator import itemgetter
 from better_onset import improved_beat_tracking
 from robust_model_maker import create_ffnn_model
 import warnings

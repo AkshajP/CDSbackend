@@ -2,7 +2,6 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, BatchNormalization, Dropout, InputLayer
 from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.models import load_model
 import os
 import numpy as np
 
