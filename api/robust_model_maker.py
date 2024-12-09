@@ -47,7 +47,7 @@ def create_ffnn_model():
     """
     
     model = Sequential([
-        InputLayer(shape=(46,)),
+        InputLayer(input_shape=(46,)),
         
         # First block with residual connection
         Dense(64, activation='elu'),
