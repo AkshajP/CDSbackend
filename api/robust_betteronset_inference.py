@@ -2,8 +2,7 @@ import tensorflow as tf
 import librosa
 import numpy as np
 import os
-from tensorflow.keras.models import Sequential, load_model
-from tensorflow.keras.layers import Dense, BatchNormalization, Dropout, InputLayer
+from tensorflow.keras.models import load_model
 from itertools import groupby
 from better_onset import improved_beat_tracking
 from robust_model_maker import create_ffnn_model

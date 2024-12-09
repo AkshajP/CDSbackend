@@ -2,7 +2,7 @@ import numpy as np
 import librosa
 from scipy.signal import find_peaks, savgol_filter
 from scipy.ndimage import gaussian_filter1d
-
+import matplotlib.pyplot as plt
 def multi_feature_onset_detection(y, sr, hop_length=512):
     """
     Detect onsets using multiple features and combine them using weighted voting.
@@ -267,7 +267,7 @@ def improved_beat_tracking(y, sr):
     
     return beat_times, tempo
 
-import matplotlib.pyplot as plt
+
 
 def plot_beat_comparison(audio_file):
     """
