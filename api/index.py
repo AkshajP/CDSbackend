@@ -27,8 +27,8 @@ def process_audio():
         
         '''comment out the process required'''
 
-        #model_weights_path = "models/robust_model_80_20_split.h5"
-        model_weights_path = "models/pcp_model_80_20_split.h5"
+        #model_weights_path = "api/models/robust_model_80_20_split.h5"
+        model_weights_path = "api/models/pcp_model_80_20_split.h5"
         chord_segments = infer_pcp_chords(temp_path, model_weights_path)
         #chord_segments = infer_robust_chords(temp_path, model_weights_path)
         
