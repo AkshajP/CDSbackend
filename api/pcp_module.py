@@ -38,7 +38,7 @@ def pcp_vectorise_segment(segment, sr, filename):
     try:
         # Harmonic-percussive source separation
         padded = librosa.util.fix_length(segment, size = n_fft)
-        y_harmonic, y_percussive = librosa.effects.hpss(segment, n_fft=n_fft)
+        y_harmonic, y_percussive = librosa.effects.hpss(segment)
         
         # Compute CQT-based chromagram from harmonic signal
         chromagram = librosa.feature.chroma_cqt(
